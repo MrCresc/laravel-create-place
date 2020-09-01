@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+h1 {
+  margin: 20px 0;
+}
+
+h3 {
+  margin: 5px 0;
+}
+
 ul {
   list-style: none;
   display: flex;
@@ -13,5 +21,11 @@ ul {
 }
 
 li {
-  padding: 0 10px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+li:hover {
+  transform: scale(1.05);
+  transition: all 0.2s;
 }

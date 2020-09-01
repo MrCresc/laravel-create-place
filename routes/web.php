@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/cars','CarController@arrayCars');
+Route::get('/handlebars-cars','CarController@handlebarsCars');

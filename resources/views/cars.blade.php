@@ -2,11 +2,25 @@
 @section('main')
 
 <h1>Lista auto</h1>
-  <ul>
-    <?php
-    foreach ($arrayCars as $car) {
-      echo '<li style="display:inline"><h2>'.$car['name'].' '.$car['model'].'</h2>'.'<img src="'.$car['imgurl'].'" alt=""></li>';
-    }
-    ?>
-  </ul>
+  <h2>Database MYSQL</h2>
+    <ul>
+
+      @foreach ($arrayCars as $car)
+        <li><h3>{{$car->name}}<br>{{$car->model}}</h3><img src="{{$car->imgurl}}" alt=""></li>
+      @endforeach
+
+    </ul>
+
+  <h2>Array normale</h2>
+    <ul>
+      <?php
+      foreach ($arrayCarsNoDb as $car) {
+        echo '<li><h3>'.$car['name'].'<br>'.$car['model'].'</h3>'.'<img src="'.$car['imgurl'].'" alt=""></li>';
+      }
+      ?>
+    </ul>
+
+    <a href="/api/api-cars">Sezione Api</a>
+    <br>
+    <a href="/handlebars-cars">Auto stampate con Handlebars</a>
 @endsection
